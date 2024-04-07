@@ -19,7 +19,7 @@ const Header = () => {
 //? This is the styled components CSS code
 const MainHeader = styled.header`
   padding: 0 4.8rem;
-  height: 8rem;
+  height: 7.5rem;
   background-color: ${({ theme }) => theme.colors.bg};
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,8 @@ const MainHeader = styled.header`
 
   .logo {
     /* height: 5rem; Temporary Comment This Code*/
+
+    /* This code for heading and the logo of the app */
     font-size: 3.5rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.primary};

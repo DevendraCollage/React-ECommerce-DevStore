@@ -32,41 +32,38 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
- 
-  background: #fff;
+    background: #fff;
     border: 5px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-   font-family: "Work Sans", sans-serif;
-
-}
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Work Sans", sans-serif;
+  }
 
 /* In this css we also use the theme Provide of the Styled Components */
-
-h1 {
-  color: ${({ theme }) => theme.colors.heading};
-  font-size: 6rem;
-  font-weight: 900;
-}
+  h1 {
+    color: ${({ theme }) => theme.colors.heading};
+    font-size: 6rem;
+    font-weight: 900;
+  }
 
  h2 {
    color: ${({ theme }) => theme.colors.heading};
    font-size: 4.4rem;
-   font-weight: 300;
+   font-weight: bold;
+   font-weight: 700;
    white-space: normal;
-  
   }
 
-h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
-}
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
 
 p, button {
   color: ${({ theme }) => theme.colors.text};
@@ -87,7 +84,7 @@ li {
 ${"" /* resuable code section  */}
 
     .container {
-    max-width: 120rem;
+    max-width: 105rem;
     margin: 0 auto;
     }
 
@@ -98,7 +95,6 @@ ${"" /* resuable code section  */}
 
     .grid-two-column {
     grid-template-columns: repeat(2, 1fr);
-
     }
 
     .grid-three-column {

@@ -1,12 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+import HeroSection from "./Components/HeroSection";
 
 const Home = () => {
-  return <Wrapper className="test">Home Page</Wrapper>;
+  const data = {
+    name: "DevStore",
+  };
+  return <HeroSection myName={data} />;
 };
-
-const Wrapper = styled.section`
-  height: 100vh;
-`;
 
 export default Home;

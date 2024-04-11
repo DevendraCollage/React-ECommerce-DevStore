@@ -94,6 +94,7 @@ ${"" /* resuable code section  */}
     }
 
     .grid-two-column {
+      /* fr - means fractional unit */
     grid-template-columns: repeat(2, 1fr);
     }
 

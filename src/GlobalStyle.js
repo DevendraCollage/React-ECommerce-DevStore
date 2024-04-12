@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 
  h2 {
    color: ${({ theme }) => theme.colors.heading};
-   font-size: 4.4rem;
+   font-size: 4rem;
    font-weight: bold;
    font-weight: 700;
    white-space: normal;
@@ -140,7 +140,6 @@ ${"" /* resuable code section  */}
         color: ${({ theme }) => theme.colors.black};
         padding: 1.6rem 2.4rem;
         border: 1px solid ${({ theme }) => theme.colors.border};
-        text-transform: uppercase;
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};
     }
 

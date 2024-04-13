@@ -50,9 +50,11 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/cart" element={<Cart />} />
+          {/* This route is used for when any wrong url occurred then error page will be showed*/}
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
+      {/* This is my Footer Component */}
       <Footer />
     </ThemeProvider>
   );

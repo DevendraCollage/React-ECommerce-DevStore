@@ -16,7 +16,7 @@ const productReducer = (state, action) => {
   //     };
   //   }
 
-  //? You can also done like this
+  //? You can also done like this to fetch API data
   switch (action.type) {
     case "SET_LOADING":
       return {

@@ -83,6 +83,29 @@ li {
 
 ${"" /* resuable code section  */}
 
+    .card-data-flex {
+      margin: 1rem 0;
+      display: flex;
+      gap: 1rem; /* Reduce the gap between elements */
+      align-items: center;
+    }
+
+    h3 {
+      color: ${({ theme }) => theme.colors.text};
+      text-transform: capitalize;
+      margin-right: 1rem; /* Add margin to create space between name and price */
+      flex: 1; /* Allow the name to take up remaining space */
+    }
+
+    .card-data--price {
+      color: ${({ theme }) => theme.colors.helper};
+    }
+
+    .card-data {
+      margin-left: 4rem;
+      margin-top: 0.5rem;
+    }
+
     .container {
     max-width: 105rem;
     margin: 0 auto;
@@ -117,22 +140,17 @@ ${"" /* resuable code section  */}
       text-transform: capitalize;
     }
 
-     .intro-data {
-      margin-bottom: 0;
-      text-transform: uppercase;
-      color: #5138ee;
-    }
-
    .caption {
       position: absolute;
       top: 15%;
-      right: 10%;
+      right: 5%;
       text-transform: uppercase;
       background-color: ${({ theme }) => theme.colors.bg};
       color: ${({ theme }) => theme.colors.helper};
-      padding: 0.8rem 2rem;
+      padding: 0.8rem 2rem; /* Adjust padding as needed */
       font-size: 1.2rem;
       border-radius: 2rem;
+      margin-right: 1rem;
     }
 
     input, textarea{

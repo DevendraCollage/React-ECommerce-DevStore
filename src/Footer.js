@@ -127,7 +127,9 @@ const Wrapper = styled.section`
   .footer-contact {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
   }
 
   .footer-icons {

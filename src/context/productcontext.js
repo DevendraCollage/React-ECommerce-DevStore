@@ -17,6 +17,9 @@ const initialState = {
   isError: false,
   products: [],
   featuredProducts: [], // We are using featured products as in the API if we use featured True then an then we will fetch those products
+  //? Add the object new properties for single product
+  isSingleLoading: false,
+  singleProduct: {},
 };
 
 //? 2. Second Step create the Provider
@@ -25,6 +28,7 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //? Define the getProducts method and fetch the data using axios third party library
+  //* This were i will get all the products of the API
   const getProduct = async (url) => {
     dispatch({ type: "SET_LOADING" });
     try {
@@ -37,13 +41,29 @@ const AppProvider = ({ children }) => {
     }
   };
 
+  //* This were i will get products by their id
+  const getSingleProducts = async (url) => {
+    dispatch({ type: "SET_SINGLE_LOADING" });
+    try {
+      const res = await axios.get(url);
+      // console.log(res); for check the res in the console
+      const singleProduct = await res.data;
+      dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct });
+    } catch (error) {
+      dispatch({ type: "SET_SINGLE_ERROR" });
+    }
+  };
+
   //? Call the API Once that for use the useEffect
   useEffect(() => {
     getProduct(API);
+    // getSingleProducts(API);
   }, []);
 
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, getSingleProducts }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 

@@ -10,7 +10,7 @@ import reducer from "../Reducer/productsReducer";
 const AppContext = createContext();
 
 //? Create the API Variable
-const API = "https://661bb1ed65444945d05012a9.mockapi.io/DevStore";
+const API = "https://api.pujakaitem.com/api/products";
 
 const initialState = {
   isLoading: false,
@@ -57,7 +57,7 @@ const AppProvider = ({ children }) => {
   //? Call the API Once that for use the useEffect
   useEffect(() => {
     getProduct(API);
-    // getSingleProducts(API);
+    getSingleProducts(`${API}?id=devserialnoa`); // I'll provide the static id to fetch the single product data but this will not work properly
   }, []);
 
   return (
